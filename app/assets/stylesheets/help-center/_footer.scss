@@ -1,0 +1,39 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+
+// Variables
+// ==========================================================================
+
+$footer-height: 140px;
+
+// Sticky footer
+// ==========================================================================
+
+html,
+body { height: 100%; }
+
+.main-wrapper {
+  @include box-sizing;
+  min-height: 100%;
+  margin: 0 auto (- $footer-height);
+}
+
+.footer-pusher { height: $footer-height; }
+
+// Wrapper
+.footer {
+  @include box-sizing;
+  $box-shadow:
+    0 1px 0 $white inset
+  , 0 -1px 0 $white inset;
+  @include box-shadow($box-shadow);
+  height: $footer-height;
+  background-color: $gray3;
+  border-top: 1px solid rgb(178, 178, 178);
+
+  a:visited { color: $blue3; }
+
+  a:visited:hover { color: $blue4; }
+}
